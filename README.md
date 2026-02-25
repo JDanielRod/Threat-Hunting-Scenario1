@@ -15,31 +15,21 @@ Identify any misconfigured VMs and check for potential brute-force login attempt
 
 ### **Timeline Overview**  
 1. **🔍 Archiving Activity:**  
-   - **Observed Behavior:**  Windows-target-1 has been internet-facing for several days, the public IPAddress was in the Logs. Last Internet facing time: `2025-01-06T19:15:05.9710276Z`
+   - **Observed Behavior:**  danscenario1lab has been internet-facing for a day or so.
+   
+   - Last Internet facing time: `2025-01-06T19:15:05.9710276Z`
   
    - **Detection Query:**
 ```kql
-DeviceFileEvents
-| top 20 by Timestamp desc
-```
-```kql
-DeviceNetworkEvents
-| top 20 by Timestamp desc
-```
-```kql
-DeviceProcessEvents
-| top 20 by Timestamp desc
-```
-```kql
-  DeviceInfo
-| where DeviceName == "windows-target-1" 
-| where IsInternetFacing == true
+DeviceInfo
+| where DeviceName == "danscenario1lab"
 | order by Timestamp desc
-```
+
 
 ## Sample Output:
 
-![Screenshot 2025-01-13 152413](https://github.com/user-attachments/assets/96ce0467-2bf1-4b83-94d3-5dac66c828c6)
+<img width="647" height="305" alt="image" src="https://github.com/user-attachments/assets/6919b9e0-1af3-4fe2-9477-a5064a0a61ed" />
+
 
 ---
 
