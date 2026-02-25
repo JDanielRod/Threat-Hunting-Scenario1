@@ -136,7 +136,6 @@ Relevant TTPs(Tactics, Techniques, and Procedures):
 ---
 **📝 Response:**  
 
-|-------------|-------------------------------|------------------|-------------------|
-| 1.0         | Initial draft                  | `Jan 2025`    | `Trevino Parker`   |
-```
+   - Harden NSG of VM to allow only RDP from specific endpoints. ( no public internet access)
+   - Enable MFA
 
