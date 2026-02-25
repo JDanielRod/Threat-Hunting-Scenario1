@@ -51,9 +51,16 @@ DeviceLogonEvents
 
 <img width="686" height="276" alt="Scenario1DeviceLogonEventsExpanded" src="https://github.com/user-attachments/assets/71581581-14a9-433c-b42a-65b33819b87b" />
 
+NOTE: The VM had been running for a limited time up to this point, so the results from the query yielded 3 IPS. If the VM kept running, there would more than likely be more bad actors trying to gain access.
 ---
 
-The top 5 most failed login attempt IP addresses have not been able to successfully break into VM.
+## Further Investigation
+
+The 3 IPs that have attempted logins have not been able to gain access.
+
+```kql
+
+
 
 ```kql
 let RemoteIPsInQuestion = dynamic(["87.251.75.99","194.180.49.96", "194.180.48.11", "149.102.152.2", "141.98.11.191", "92.63.197.55", "185.7.214.87"]);
