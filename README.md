@@ -133,12 +133,8 @@ Relevant TTPs(Tactics, Techniques, and Procedures):
 | T1110      | Brute Force                       | Multiple failed login attempts from external IPs indicate brute-force activity.                  | Detects repeated authentication failures, signaling credential-based attacks.           |
 | T1078      | Valid Accounts (Attempted)        | Adversaries attempted to authenticate using legitimate credentials but were unsuccessful.        | Helps monitor for unauthorized use or attempted abuse of valid credentials.             |
 
-
-**📝 Response:**  
-
-
 ---
-
+**📝 Response:**  
 
 |-------------|-------------------------------|------------------|-------------------|
 | 1.0         | Initial draft                  | `Jan 2025`    | `Trevino Parker`   |
