@@ -37,7 +37,7 @@ DeviceInfo
 
 A few bad actors have been discovered attempting to log into target machine (danscenario1lab)
 
-**Detection Query**
+**Detection Query:**
 
 ```kql
 DeviceLogonEvents
@@ -61,11 +61,7 @@ NOTE: The VM had been running for a limited time up to this point, so the result
 The 3 IPs that have attempted logins have not been able to gain access.
 
 ```kql
-
-
-
-```kql
-let RemoteIPsInQuestion = dynamic(["87.251.75.99","194.180.49.96", "194.180.48.11", "149.102.152.2", "141.98.11.191", "92.63.197.55", "185.7.214.87"]);
+let RemoteIPsInQuestion = dynamic(["185.156.73.74", "185.218.138.3", "185..156.73.169"]);
 DeviceLogonEvents
 | where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
 | where ActionType == "LogonSuccess"
