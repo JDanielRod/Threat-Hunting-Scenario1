@@ -7,7 +7,7 @@ During routine maintenance, the security team is tasked with investigating any V
 
 NOTE: I spun up a VM on Azure, and then onboarded it to Microsoft Defender for Endpoint. This will act as the internet-facing asset for this example.
 
-## Goal
+## Goal:
 Identify any misconfigured VMs and check for potential brute-force login attempts/successes from external sources.
 
 ---
