@@ -125,6 +125,7 @@ The device exposed to the internet has clear brute force attempts occuring. Ther
 Relevant TTPs(Tactics, Techniques, and Procedures):
 
 ---
+Relevant TTPs(Tactics, Techniques, and Procedures):
 
 # 🛡️ MITRE ATT&CK TTPs for Incident Detection
 
