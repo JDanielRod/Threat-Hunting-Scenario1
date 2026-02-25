@@ -60,6 +60,7 @@ NOTE: The VM had been running for a limited time up to this point, so the result
 
 The 3 IPs that have attempted logins have not been able to gain access.
 
+**Detection Query:**
 ```kql
 let RemoteIPsInQuestion = dynamic(["185.156.73.74", "185.218.138.3", "185..156.73.169"]);
 DeviceLogonEvents
@@ -70,7 +71,6 @@ DeviceLogonEvents
 ## Sample Output:
 <img width="689" height="365" alt="NoSuccessfulLogin" src="https://github.com/user-attachments/assets/0a025dac-31c6-442f-a203-39adc47e3bd7" />
 
-Query returned no results
 ---
 
 The only successful remote/network logins in the last 30 days for 'labuser' account (57 total):
