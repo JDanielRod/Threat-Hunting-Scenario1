@@ -35,19 +35,20 @@ DeviceInfo
 
 ### Brute Force Attempts Detection
 
-Several bad actors have been discovered attempting to log into the target machine.
+A few bad actors have been discovered attempting to log into target machine (danscenario1lab)
 
 ```kql
 DeviceLogonEvents
-| where DeviceName == "windows-target-1"
-| where LogonType has_any("Network", "Interactive", "RemoteInteractive", "Unlock")
+| where DeviceName == "danscenario1lab"
+| where LogonType has_any("Network", "Interactive","RemoteInteractive","Unlock")
 | where ActionType == "LogonFailed"
 | where isnotempty(RemoteIP)
 | summarize Attempts = count() by ActionType, RemoteIP, DeviceName
 | order by Attempts
 ```
 
-![Brute Force Attempt](https://github.com/user-attachments/assets/17ba8bdd-bd3b-4469-a374-15046cf45b1c)
+![Brute Force Attempt](<img width="686" height="276" alt="Scenario1DeviceLogonEventsExpanded" src="https://github.com/user-attachments/assets/25d702a3-8e05-4522-a61b-82007465d101" />
+)
 
 ---
 
