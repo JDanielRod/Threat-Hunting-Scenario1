@@ -47,8 +47,9 @@ DeviceLogonEvents
 | order by Attempts
 ```
 
-![Brute Force Attempt](<img width="686" height="276" alt="Scenario1DeviceLogonEventsExpanded" src="https://github.com/user-attachments/assets/25d702a3-8e05-4522-a61b-82007465d101" />
-)
+##Sample Output:
+
+<img width="686" height="276" alt="Scenario1DeviceLogonEventsExpanded" src="https://github.com/user-attachments/assets/71581581-14a9-433c-b42a-65b33819b87b" />
 
 ---
 
