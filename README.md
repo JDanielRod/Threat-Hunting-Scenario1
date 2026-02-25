@@ -73,46 +73,54 @@ DeviceLogonEvents
 
 ---
 
-The only successful remote/network logins in the last 30 days for 'labuser' account (57 total):
+The only successful remote/network logins in the last 7 days for 'dano12go' account (3 total):
+
+**Detection Query:**
 
 ```kql
 DeviceLogonEvents
-| where DeviceName == "windows-target-1"
+| where DeviceName == "danscenario1lab"
 | where LogonType == "Network"
 | where ActionType == "LogonSuccess"
-| where AccountName == "labuser"
 | summarize count()
 ```
+## Sample Output:
+<img width="686" height="252" alt="OnlysuccessfullogonME" src="https://github.com/user-attachments/assets/766913fe-b066-45c6-bec2-83052fa4d073" />
 
-There were zero (0) failed logons for the 'labuser' account, indicating that a brute force attempt for this account didn't take place, and a 1-time password guess is unlikely.
+There were 0 failed logons from this account, indicating no brute force attempt taking place for this account. Unlikely this was a 1-time password guess.
+
+**Detecion Query:**
 
 ```kql
 DeviceLogonEvents
-| where DeviceName == "windows-target-1"
+| where DeviceName == "danscenario1lab"
 | where LogonType == "Network"
 | where ActionType == "LogonFailed"
-| where AccountName == "labuser"
+| where AccountName == "dano12go"
 | summarize count()
 ```
+## Sample Output:
+<img width="692" height="188" alt="0failedlogons" src="https://github.com/user-attachments/assets/92c00770-ad6c-4825-9349-aeecf4b7581a" />
 
 ---
 
-We checked all of the successful login IP addresses for the 'labuser' account to see if any of them were unusual or from an unexpected location. All were normal.
+We checked successful login IPs for "dano12go" to see if any of them were unusual or from an unexpected location. all were normal. The location for the remote IP in the screenshot is in the area I am at.
 
 ```kql
 DeviceLogonEvents
-| where DeviceName == "windows-target-1"
+| where DeviceName == "danscenario1lab"
 | where LogonType == "Network"
 | where ActionType == "LogonSuccess"
-| where AccountName == "labuser"
+| where AccountName == "dano12go"
 | summarize LoginCount = count() by DeviceName, ActionType, AccountName, RemoteIP
 ```
 
-![Successful Logins](https://github.com/user-attachments/assets/15512ee9-41d7-4fc2-8f5b-abae6948ff04)
+## Sample Output:
+<img width="685" height="229" alt="SuccessfulLogonCheck" src="https://github.com/user-attachments/assets/e013a47b-0743-41a3-b18f-3d9fd848e9bb" />
 
 ---
 
-Though the device was exposed to the internet and clear brute force attempts have taken place, there is no evidence of any brute force success or unauthorized access from the legitimate account 'labuser'.
+The device exposed to the internet has clear brute force attempts occuring. There is no evidence of any brute force success or unauthorized access from legitimate account "dano12go" 
 
 Here's how the relevant TTPs and detection elements can be organized into a chart for easy reference:
 
