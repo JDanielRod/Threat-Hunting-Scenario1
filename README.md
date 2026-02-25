@@ -67,9 +67,10 @@ DeviceLogonEvents
 | where ActionType == "LogonSuccess"
 | where RemoteIP has_any(RemoteIPsInQuestion)
 ```
+## Sample Output:
+<img width="689" height="365" alt="NoSuccessfulLogin" src="https://github.com/user-attachments/assets/0a025dac-31c6-442f-a203-39adc47e3bd7" />
 
-**<Query no results>**
-
+Query returned no results
 ---
 
 The only successful remote/network logins in the last 30 days for 'labuser' account (57 total):
