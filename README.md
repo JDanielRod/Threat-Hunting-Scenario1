@@ -133,48 +133,13 @@ Relevant TTPs(Tactics, Techniques, and Procedures):
 | T1110      | Brute Force                       | Multiple failed login attempts from external IPs indicate brute-force activity.                  | Detects repeated authentication failures, signaling credential-based attacks.           |
 | T1078      | Valid Accounts (Attempted)        | Adversaries attempted to authenticate using legitimate credentials but were unsuccessful.        | Helps monitor for unauthorized use or attempted abuse of valid credentials.             |
 
----
-
-This chart clearly organizes the MITRE ATT&CK techniques (TTPs) used in this incident, detailing their relevance to the detection process.
 
 **📝 Response:**  
-- Did a Audit, Malware Scan, Vulnerability Management Scan, Hardened the NSG attached to windows-target-1 to allow only RDP traffic from specific endpoints (no public internet access), Implemented account lockout policy, Implemented MFA, awaiting further instructions.
+
 
 ---
 
-## Steps to Reproduce:
-1. Provision a virtual machine with a public IP address.
-2. Ensure the device is actively communicating or available on the internet. (Test ping, etc.)
-3. Onboard the device to Microsoft Defender for Endpoint.
-4. Verify the relevant logs (e.g., network traffic logs, exposure alerts) are being collected in MDE.
-5. Execute the KQL query in the MDE advanced hunting to confirm detection.
 
----
-
-## Supplemental:
-- **More on "Shared Services" in the context of PCI DSS**: [PCI DSS Scoping and Segmentation](https://www.pcisecuritystandards.org%2Fdocuments%2FGuidance-PCI-DSS-Scoping-and-Segmentation_v1.pdf)
-
----
-
-## Created By:
-- **Author Name**: Trevino Parker  
-- **Author Contact**: [LinkedIn](https://www.linkedin.com/in/trevinoparker/)  
-- **Date**: Jan 2025
-
-## Validated By:
-- **Reviewer Name**: Josh Madakor  
-- **Reviewer Contact**: [LinkedIn](https://www.linkedin.com/in/joshmadakor/)  
-- **Validation Date**: Jan 2025
-
----
-
-## Additional Notes:
-- **None**
-
----
-
-## Revision History:
-| **Version** | **Changes**                   | **Date**         | **Modified By**   |
 |-------------|-------------------------------|------------------|-------------------|
 | 1.0         | Initial draft                  | `Jan 2025`    | `Trevino Parker`   |
 ```
