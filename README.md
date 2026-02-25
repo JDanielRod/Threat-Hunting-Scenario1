@@ -37,7 +37,8 @@ DeviceInfo
 
 A few bad actors have been discovered attempting to log into target machine (danscenario1lab)
 
-**Detection Query*
+**Detection Query**
+
 ```kql
 DeviceLogonEvents
 | where DeviceName == "danscenario1lab"
