@@ -122,8 +122,6 @@ DeviceLogonEvents
 
 The device exposed to the internet has clear brute force attempts occuring. There is no evidence of any brute force success or unauthorized access from legitimate account "dano12go" 
 
-Relevant TTPs(Tactics, Techniques, and Procedures):
-
 ---
 Relevant TTPs(Tactics, Techniques, and Procedures):
 
