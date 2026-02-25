@@ -24,7 +24,7 @@ Identify any misconfigured VMs and check for potential brute-force login attempt
 DeviceInfo
 | where DeviceName == "danscenario1lab"
 | order by Timestamp desc
-
+```
 
 ## Sample Output:
 
