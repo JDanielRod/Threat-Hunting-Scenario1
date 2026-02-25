@@ -47,7 +47,7 @@ DeviceLogonEvents
 | order by Attempts
 ```
 
-##Sample Output:
+## Sample Output:
 
 <img width="686" height="276" alt="Scenario1DeviceLogonEventsExpanded" src="https://github.com/user-attachments/assets/71581581-14a9-433c-b42a-65b33819b87b" />
 
