@@ -127,16 +127,11 @@ Relevant TTPs(Tactics, Techniques, and Procedures):
 
 # 🛡️ MITRE ATT&CK TTPs for Incident Detection
 
-| **TTP ID** | **TTP Name**                     | **Description**                                                                                          | **Detection Relevance**                                                         |
-|------------|-----------------------------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| T1071      | Application Layer Protocol        | Observing network traffic and identifying misconfigurations (e.g., device exposed to the internet).       | Helps detect exposed devices via application protocols, identifying misconfigurations. |
-| T1075      | Pass the Hash                     | Failed login attempts suggesting brute-force or password spraying attempts.                               | Identifies failed login attempts from external sources, indicative of password spraying.  |
-| T1110      | Brute Force                       | Multiple failed login attempts from external sources trying to gain unauthorized access.                 | Identifies brute-force login attempts and suspicious login behavior.            |
-| T1046      | Network Service Scanning          | Exposure of internal services to the internet, potentially scanned by attackers.                         | Indicates potential reconnaissance and scanning by external actors.            |
-| T1021      | Remote Services                   | Remote logins via network/interactive login types showing external interaction attempts.                   | Identifies legitimate and malicious remote service logins to an exposed device.  |
-| T1070      | Indicator Removal on Host         | No indicators of success in the attempted brute-force attacks, showing system defenses were effective.     | Confirms the lack of successful attacks due to effective defense measures.      |
-| T1213      | Data from Information Repositories| Device exposed publicly, indicating potential reconnaissance activities.                                  | Exposes possible adversary reconnaissance when a device is publicly accessible.  |
-| T1078      | Valid Accounts                    | Successful logins from the legitimate account ('labuser') were normal and monitored.                      | Monitors legitimate access and excludes unauthorized access attempts.           |
+| **TTP ID** | **TTP Name**                      | **Description**                                                                                  | **Detection Relevance**                                                                 |
+|------------|-----------------------------------|--------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| T1190      | Exploit Public-Facing Application | System was publicly accessible, making it a potential target for exploitation attempts.          | Helps identify exposed services and potential attack surfaces from internet-facing apps.|
+| T1110      | Brute Force                       | Multiple failed login attempts from external IPs indicate brute-force activity.                  | Detects repeated authentication failures, signaling credential-based attacks.           |
+| T1078      | Valid Accounts (Attempted)        | Adversaries attempted to authenticate using legitimate credentials but were unsuccessful.        | Helps monitor for unauthorized use or attempted abuse of valid credentials.             |
 
 ---
 
